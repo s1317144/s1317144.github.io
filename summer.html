@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script  src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    
+    <style>
+      
+        body{
+            width:1000px;
+            height:800px;
+        }
+        
+        
+        #pro1{
+            font-size:40px;
+            background: #CCFFFF	;
+            color:#0000FF;
+            margin:20px;
+            padding:20px;
+        }
+        #pro2{
+            font-size:20px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+ 
+
+       <body bgcolor="#C2EEFF"> </body>
+
+   <center>
+        <h1 id="pro1">ゼミ合宿～河口湖～</h1>
+       <h2 id="pro2"><p>9月12,13日に3年の市村ゼミは河口湖に行きました。</p>
+           <p2>写真をクリックするとクレームブリュレを作ってる市村先生になります。</p2></h2>
+  
+        <img id="gazo" onclick="changeIMG()" src="zemi.jpg"
+              width="800" height="600">
+    </center>
+
+<script>
+
+    var img = new Array();
+
+       img[0] = new Image();
+       img[0].src = "zemi.jpg"  
+       img[1] = new Image();
+       img[1].src = "zemi2.jpg";
+
+         var cnt=0;
+
+         function changeIMG(){
+  
+         if (cnt == 1)
+           { cnt=0; }
+               else
+           { cnt++; }
+  
+  
+           document.getElementById("gazo").src=img[cnt].src;
+                    }
+
+</script>
+   
+   
+    
+</body>
+</html>
